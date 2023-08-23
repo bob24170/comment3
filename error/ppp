@@ -19,6 +19,100 @@ Changes not staged for commit:
 
 no changes added to commit (use "git add" and/or "git commit -a")
 
+
+
+
+
+
+
+Windows PowerShell
+Copyright (C) 2014 Microsoft Corporation. All rights reserved.
+
+PS C:\Users\88> cd C:\Users\88\Desktop\blog-comments-step4_e
+PS C:\Users\88\Desktop\blog-comments-step4_e> git log --all --graph
+* commit cf83fa8851c591a03a477cb79c1e97b31677fa4e (origin/master)
+| Author: bob24170 <1476661867@qq.com>
+| Date:   Tue Aug 22 21:45:44 2023 +0800
+|
+|     Version 0.0.0
+|
+* commit b7dc2d92ac373e5f98a80637a2c5b0ec361939cf (HEAD -> master)
+  Author: bob24170 <1476661867@qq.com>
+  Date:   Tue Aug 22 21:31:53 2023 +0800
+
+      initial commit
+PS C:\Users\88\Desktop\blog-comments-step4_e> git commit
+On branch master
+Your branch is behind 'origin/master' by 1 commit, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   package.json
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\88\Desktop\blog-comments-step4_e> git commit -m "Revert to b7dc2d9"
+On branch master
+Your branch is behind 'origin/master' by 1 commit, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   package.json
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\88\Desktop\blog-comments-step4_e> git pull origin master
+remote: Enumerating objects: 9, done.
+remote: Counting objects: 100% (9/9), done.
+remote: Compressing objects: 100% (7/7), done.
+remote: Total 8 (delta 2), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (8/8), 4.09 KiB | 27.00 KiB/s, done.
+From https://github.com/bob24170/comment3
+ * branch            master     -> FETCH_HEAD
+   cf83fa8..0c6584b  master     -> origin/master
+error: Your local changes to the following files would be overwritten by merge:
+        package.json
+Please commit your changes or stash them before you merge.
+Aborting
+Updating b7dc2d9..0c6584b
+PS C:\Users\88\Desktop\blog-comments-step4_e> git push origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'https://github.com/bob24170/comment3.git'
+PS C:\Users\88\Desktop\blog-comments-step4_e> git push -u origin master
+To https://github.com/bob24170/comment3.git
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'https://github.com/bob24170/comment3.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+PS C:\Users\88\Desktop\blog-comments-step4_e> git log --all --graph
+* commit 0c6584b1c238c847313408ddfa2786f0ff96531b (origin/master)
+| Author: bob24170 <58536544+bob24170@users.noreply.github.com>
+| Date:   Wed Aug 23 21:20:07 2023 +0800
+|
+|     Create ppp
+|
+* commit 3870b607ab8188137c57fae5e36940eecd14f72d
+| Author: bob24170 <58536544+bob24170@users.noreply.github.com>
+| Date:   Wed Aug 23 21:16:58 2023 +0800
+|
+|     Create git
+|
+* commit cf83fa8851c591a03a477cb79c1e97b31677fa4e
+| Author: bob24170 <1476661867@qq.com>
+| Date:   Tue Aug 22 21:45:44 2023 +0800
+|
+|     Version 0.0.0
+|
+* commit b7dc2d92ac373e5f98a80637a2c5b0ec361939cf (HEAD -> master)
+  Author: bob24170 <1476661867@qq.com>
+  Date:   Tue Aug 22 21:31:53 2023 +0800
+
+      initial commit
+PS C:\Users\88\Desktop\blog-comments-step4_e>
 C:\Users\88\Desktop\blog-comments-step4_e>git pull
 fatal: unable to access 'https://github.com/bob24170/comment3.git/': Recv failur
 e: Connection was reset
